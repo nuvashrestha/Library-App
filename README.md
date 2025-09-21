@@ -18,7 +18,7 @@ A whimsical, fairytale-styled web-based library application that allows users to
 
 ## Demo
 
-You can view a live demo of the app here: [Link](nuvashrestha/Library-App.github.io)
+You can view a live demo of the app here: [Link](https://nuvashrestha.github.io/Library-App/)
 
 ---
 
