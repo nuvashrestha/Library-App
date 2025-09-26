@@ -48,23 +48,23 @@ header .library-info {
     margin: 20px 0;
 }
 
-#add-book {
-    background: linear-gradient(135deg, #f9e4b7, #f5c6ec);
-    border: 2px solid #d8b4fe;
+.add-new-book {
+    background: linear-gradient(135deg, #f9e4b7, #f5c6ec) !important;
+    border: 2px solid #d8b4fe !important;
     border-radius: 30px;
     padding: 12px 25px;
     font-family: 'Great Vibes', cursive;
     font-size: 1.3rem;
-    color: #4b3832;
+    color: #4b3832 !important;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(91, 50, 86, 0.3);
     transition: all 0.3s ease;
 }
 
-#add-book:hover {
-    background: linear-gradient(135deg, #fdf3d9, #f7d4f0);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 18px rgba(91, 50, 86, 0.5);
+.add-new-book:hover {
+    background: linear-gradient(135deg, #fdf3d9, #f7d4f0) !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 6px 18px rgba(91, 50, 86, 0.5) !important;
 }
 
 #books-container {

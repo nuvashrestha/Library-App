@@ -1,6 +1,6 @@
 const myLibrary = [];
 let booksContainer = document.querySelector("#books-container");
-let addBookButton = document.querySelector("#add-book");
+let addBookButton = document.querySelector("#add-button");
 
 function Book(title, author, pages, read) {
     this.id = crypto.randomUUID();
@@ -52,14 +52,11 @@ function displayBook() {
 }
 
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 310, "Read");
-addBookToLibrary("1984", "George Orwell", 328, "Not Read");
 addBookToLibrary("The Red Pyramid", "Rick Riordan", 403, "Reading");
 addBookToLibrary("The Lord of the Rings", "J.R.R. Tolkien", 1178, "Read");
 addBookToLibrary("Dune", "Frank Herbert", 412, "Not Read");
 addBookToLibrary("The Hunger Games", "Suzanne Collins", 374, "Read");
-addBookToLibrary("The Catcher in the Rye", "J.D. Salinger", 234, "Reading");
 addBookToLibrary("To Kill a Mockingbird", "Harper Lee", 281, "Not Read");
-
 
 function adjustTitleFont(bookTitleElement) {
     const maxLength = 10; // max characters before shrinking
@@ -102,3 +99,14 @@ for (let i = 0; i < numStars; i++) {
     star.style.animationDelay = `${Math.random() * 5}s`; // random start time
     document.body.appendChild(star);
 }
+
+addBookButton.addEventListener("click", (e) => {
+    e.preventDefault(); // stops form reload
+
+    const title = document.querySelector("#inputTitle").value;
+    const author = document.querySelector("#inputAuthor").value;
+    const pages = document.querySelector("#inputPages").value;
+    const read = document.querySelector("#inputStatus").value;
+    
+    addBookToLibrary(title, author, pages, read);
+});
