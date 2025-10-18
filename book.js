@@ -20,6 +20,7 @@ function addBookToLibrary(title, author, pages, read) {
     displayBook();
 }
 
+
 function displayBook() {
     booksContainer.innerHTML = '';
     myLibrary.forEach(book => {
@@ -31,6 +32,7 @@ function displayBook() {
         let bookPagesRead = document.createElement("p");
         let bookRead = document.createElement("p");
         let removeButton = document.createElement("button");
+        let editButton = document.createElement("button");
 
         bookCard.appendChild(bookTitle);
         bookCard.appendChild(bookAuthor);
@@ -43,13 +45,18 @@ function displayBook() {
         bookPagesRead.textContent = "Pages: " + book.pages;
         bookRead.textContent = "Status: " + book.read;
 
+        editButton.className = "edit-button";
+        editButton.textContent = "Edit";
+        bookCard.appendChild(editButton);
+
         removeButton.className = "remove-button";
         removeButton.textContent = "Delete";
         bookCard.appendChild(removeButton);
-
+        
         booksContainer.appendChild(bookCard);
     });
 }
+
 
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 310, "Read");
 addBookToLibrary("The Red Pyramid", "Rick Riordan", 403, "Reading");
@@ -107,6 +114,6 @@ addBookButton.addEventListener("click", (e) => {
     const author = document.querySelector("#inputAuthor").value;
     const pages = document.querySelector("#inputPages").value;
     const read = document.querySelector("#inputStatus").value;
-    
+
     addBookToLibrary(title, author, pages, read);
 });
